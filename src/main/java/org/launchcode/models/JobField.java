@@ -14,9 +14,9 @@ public class JobField {
         nextId++;
     }
 
-    public JobField(String aValue) {
+    public JobField(String value) {
         this();
-        value = aValue;
+        this.value = value;
     }
 
     public boolean contains(String value) {

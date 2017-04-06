@@ -1,10 +1,8 @@
 package org.launchcode.models.data;
 
-import javafx.geometry.Pos;
 import org.launchcode.models.*;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  * Created by LaunchCode
@@ -19,11 +17,9 @@ public class JobData {
     private JobFieldData<CoreCompetency> coreCompetencies = new JobFieldData<>();
     private JobFieldData<PositionType> positionTypes = new JobFieldData<>();
 
-
     private JobData() {
         JobDataImporter.loadData(this);
     }
-
 
     public static JobData getInstance() {
         if (instance == null) {
@@ -45,7 +41,6 @@ public class JobData {
         return jobs;
     }
 
-
     public ArrayList<Job> findByColumnAndValue(JobFieldType column, String value) {
 
         ArrayList<Job> matchingJobs = new ArrayList<>();
@@ -57,7 +52,6 @@ public class JobData {
 
         return matchingJobs;
     }
-
 
     public ArrayList<Job> findByValue(String value) {
 
@@ -81,11 +75,9 @@ public class JobData {
         return matchingJobs;
     }
 
-
     public void add(Job job) {
         jobs.add(job);
     }
-
 
     private static JobField getFieldByType(Job job, JobFieldType type) {
         switch(type) {
