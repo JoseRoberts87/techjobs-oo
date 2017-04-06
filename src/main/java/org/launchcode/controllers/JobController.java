@@ -47,7 +47,6 @@ public class JobController {
             model.addAttribute("title", "new job");
             return "new-job";
         }
-        
 
         String name = jobForm.getName();
         Employer employer = jobData.getEmployers().findById(jobForm.getEmployerId());
